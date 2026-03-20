@@ -3,7 +3,7 @@
     "ai-open": {
       "command": "node",
       "args": ["dist/index.js"],
-      "cwd": "/Users/jakevin/code/make-ai-open"
+      "cwd": "/Users/jakevin/code/reopenai"
     }
   }
 }

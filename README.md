@@ -1,8 +1,8 @@
-# make-ai-open
+# ReopenAI
 
 > Make all AI tools interoperable. One MCP server to control them all.
 
-[![Node.js Version](https://img.shields.io/node/v/make-ai-open?style=flat-square)](https://nodejs.org)
+[![Node.js Version](https://img.shields.io/node/v/reopenai?style=flat-square)](https://nodejs.org)
 
 A Model Context Protocol (MCP) server that lets **any MCP-compatible AI tool** (Claude Code, Cursor, Cline, etc.) control **any AI desktop application** (Antigravity, Cursor, Codex, ChatGPT, ChatWise, Grok) through a unified interface.
 
@@ -11,7 +11,7 @@ A Model Context Protocol (MCP) server that lets **any MCP-compatible AI tool** (
 ```
 Claude Code / Cursor / Cline / ...
         ↓ MCP Protocol (stdio)
-   make-ai-open (this project)
+   reopenai (this project)
         ↓ child_process
    opencli <app> <command>
         ↓ CDP (Chrome DevTools Protocol)
@@ -38,13 +38,32 @@ Add to your project's `.mcp.json`:
   "mcpServers": {
     "ai-open": {
       "command": "node",
-      "args": ["/path/to/make-ai-open/dist/index.js"]
+      "args": ["/path/to/reopenai/dist/index.js"]
     }
   }
 }
 ```
 
-Then in Claude Code, you can say:
+### For Opencode (`~/.config/opencode/opencode.json`)
+
+Add to the `mcp` object:
+
+```json
+{
+  "mcp": {
+    "ai-open": {
+      "command": [
+        "node",
+        "/path/to/reopenai/dist/index.js"
+      ],
+      "enabled": true,
+      "type": "local"
+    }
+  }
+}
+```
+
+然后，你可以使用类似的对话进行交互：
 - *"Check if Antigravity is connected"* → calls `ai_status`
 - *"Ask Cursor to write a sorting algorithm"* → calls `ai_ask`
 - *"Read the latest conversation from ChatGPT"* → calls `ai_read`
@@ -79,8 +98,8 @@ Then in Claude Code, you can say:
 ## Development
 
 ```bash
-git clone git@github.com:jackwener/make-ai-open.git
-cd make-ai-open
+git clone git@github.com:jackwener/reopenai.git
+cd reopenai
 npm install
 npm run build
 ```
