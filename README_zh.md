@@ -2,7 +2,8 @@
 
 > 让所有 AI 工具互通互联。将任何桌面 AI 客户端转化为标准 API 和 MCP Server。
 
-[![Node.js Version](https://img.shields.io/node/v/reopenai?style=flat-square)](https://nodejs.org)
+[![npm version](https://img.shields.io/npm/v/@jackwener/reopenai.svg?style=flat-square)](https://www.npmjs.com/package/@jackwener/reopenai)
+[![License](https://img.shields.io/npm/l/@jackwener/reopenai.svg?style=flat-square)](https://github.com/jackwener/reopenai/blob/main/LICENSE)
 
 ReopenAI 是一个统一桥梁，让 **任何 AI 编码助手/前端工具**（Claude Code, Cursor, Cline 等）都能直接白嫖/控制 **任何付费 AI 桌面客户端应用**（Antigravity, Cursor, Codex, ChatGPT, ChatWise, Grok）。
 
