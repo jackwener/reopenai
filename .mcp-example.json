@@ -1,9 +1,9 @@
 {
   "mcpServers": {
-    "ai-open": {
+    "reopenai": {
       "command": "node",
       "args": ["dist/index.js"],
-      "cwd": "/Users/jakevin/code/reopenai"
+      "cwd": "/path/to/reopenai"
     }
   }
 }
