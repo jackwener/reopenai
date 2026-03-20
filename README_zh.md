@@ -31,14 +31,15 @@ Claude Code / Cursor / Cline / ...
 
 ### 搭配 Claude Code 使用
 
-在你的项目 `.mcp.json` 中添加：
+在你的项目 `.mcp.json` 中添加（请将 `/path/to/reopenai` 替换为你实际克隆的目录路径）：
 
 ```json
 {
   "mcpServers": {
     "reopenai": {
-      "command": "npx",
-      "args": ["-y", "@jackwener/reopenai"]
+      "command": "node",
+      "args": ["dist/index.js"],
+      "cwd": "/path/to/reopenai"
     }
   }
 }
@@ -46,17 +47,14 @@ Claude Code / Cursor / Cline / ...
 
 ### 搭配 Opencode 使用 (`~/.config/opencode/opencode.json`)
 
-在 `mcp` 对象中添加：
+在 `mcp` 对象中添加（请将 `/path/to/reopenai` 替换为你实际克隆的目录路径）：
 
 ```json
 {
   "mcp": {
     "reopenai": {
-      "command": [
-        "npx",
-        "-y",
-        "@jackwener/reopenai"
-      ],
+      "command": ["node", "dist/index.js"],
+      "cwd": "/path/to/reopenai",
       "enabled": true,
       "type": "local"
     }
@@ -73,9 +71,9 @@ Claude Code / Cursor / Cline / ...
 
 | 应用 | CDP 端口 | 支持的命令 |
 |-----|----------|----------|
-| **Antigravity** | 9224 | status, send, read, new, extract-code, model, watch |
-| **Cursor** | 9226 | status, send, read, new, ask, model, extract-code, screenshot, history, export |
-| **Codex** | 9222 | status, send, read, new, ask, model, extract-diff, screenshot, history, export |
+| **Antigravity** | 9224 | status, send, read, new, extract-code, model, watch, dump |
+| **Cursor** | 9226 | status, send, read, new, ask, model, extract-code, screenshot, history, export, composer, dump |
+| **Codex** | 9222 | status, send, read, new, ask, model, extract-diff, screenshot, history, export, dump |
 | **ChatGPT** | 9224 | status, send, read, new, ask |
 | **ChatWise** | 9228 | status, send, read, new, ask, model, screenshot, history, export |
 | **Grok** | 9234 | ask, debug |

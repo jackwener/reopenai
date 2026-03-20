@@ -31,14 +31,15 @@ Claude Code / Cursor / Cline / ...
 
 ### For Claude Code
 
-Add to your project's `.mcp.json`:
+Add to your project's `.mcp.json` (replace `/path/to/reopenai` with your actual path):
 
 ```json
 {
   "mcpServers": {
     "reopenai": {
-      "command": "npx",
-      "args": ["-y", "@jackwener/reopenai"]
+      "command": "node",
+      "args": ["dist/index.js"],
+      "cwd": "/path/to/reopenai"
     }
   }
 }
@@ -46,17 +47,14 @@ Add to your project's `.mcp.json`:
 
 ### For Opencode (`~/.config/opencode/opencode.json`)
 
-Add to the `mcp` object:
+Add to the `mcp` object (replace `/path/to/reopenai` with your actual path):
 
 ```json
 {
   "mcp": {
     "reopenai": {
-      "command": [
-        "npx",
-        "-y",
-        "@jackwener/reopenai"
-      ],
+      "command": ["node", "dist/index.js"],
+      "cwd": "/path/to/reopenai",
       "enabled": true,
       "type": "local"
     }
@@ -73,9 +71,9 @@ Add to the `mcp` object:
 
 | App | CDP Port | Commands |
 |-----|----------|----------|
-| **Antigravity** | 9224 | status, send, read, new, extract-code, model, watch |
-| **Cursor** | 9226 | status, send, read, new, ask, model, extract-code, screenshot, history, export |
-| **Codex** | 9222 | status, send, read, new, ask, model, extract-diff, screenshot, history, export |
+| **Antigravity** | 9224 | status, send, read, new, extract-code, model, watch, dump |
+| **Cursor** | 9226 | status, send, read, new, ask, model, extract-code, screenshot, history, export, composer, dump |
+| **Codex** | 9222 | status, send, read, new, ask, model, extract-diff, screenshot, history, export, dump |
 | **ChatGPT** | 9224 | status, send, read, new, ask |
 | **ChatWise** | 9228 | status, send, read, new, ask, model, screenshot, history, export |
 | **Grok** | 9234 | ask, debug |
