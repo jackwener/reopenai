@@ -36,9 +36,9 @@ Add to your project's `.mcp.json`:
 ```json
 {
   "mcpServers": {
-    "ai-open": {
-      "command": "node",
-      "args": ["/path/to/reopenai/dist/index.js"]
+    "reopenai": {
+      "command": "npx",
+      "args": ["-y", "@jackwener/reopenai"]
     }
   }
 }
@@ -51,10 +51,11 @@ Add to the `mcp` object:
 ```json
 {
   "mcp": {
-    "ai-open": {
+    "reopenai": {
       "command": [
-        "node",
-        "/path/to/reopenai/dist/index.js"
+        "npx",
+        "-y",
+        "@jackwener/reopenai"
       ],
       "enabled": true,
       "type": "local"
@@ -106,4 +107,4 @@ npm run build
 
 ## License
 
-MIT
+Apache-2.0

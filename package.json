@@ -1,5 +1,5 @@
 {
-  "name": "reopenai",
+  "name": "@jackwener/reopenai",
   "version": "0.1.0",
   "description": "Make all AI tools interoperable. MCP server that lets any AI control any other AI desktop app.",
   "type": "module",
@@ -23,7 +23,7 @@
     "codex"
   ],
   "author": "jackwener",
-  "license": "MIT",
+  "license": "Apache-2.0",
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.12.1",
     "cors": "^2.8.6",

@@ -36,9 +36,9 @@ Claude Code / Cursor / Cline / ...
 ```json
 {
   "mcpServers": {
-    "ai-open": {
-      "command": "node",
-      "args": ["/path/to/reopenai/dist/index.js"]
+    "reopenai": {
+      "command": "npx",
+      "args": ["-y", "@jackwener/reopenai"]
     }
   }
 }
@@ -51,10 +51,11 @@ Claude Code / Cursor / Cline / ...
 ```json
 {
   "mcp": {
-    "ai-open": {
+    "reopenai": {
       "command": [
-        "node",
-        "/path/to/reopenai/dist/index.js"
+        "npx",
+        "-y",
+        "@jackwener/reopenai"
       ],
       "enabled": true,
       "type": "local"
@@ -106,4 +107,4 @@ npm run build
 
 ## 许可协议
 
-MIT
+Apache-2.0
