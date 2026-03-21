@@ -2,8 +2,6 @@
 
 > Make all AI tools interoperable. Turn any desktop AI client into a standard API endpoint and MCP Server.
 
-[![npm version](https://img.shields.io/npm/v/@jackwener/reopenai.svg?style=flat-square)](https://www.npmjs.com/package/@jackwener/reopenai)
-[![License](https://img.shields.io/npm/l/@jackwener/reopenai.svg?style=flat-square)](https://github.com/jackwener/reopenai/blob/main/LICENSE)
 
 ReopenAI acts as a unified bridge, enabling **any AI coding assistant** (Claude Code, Cursor, Cline, etc.) to freely control and leverage **any subscription-based desktop AI app** (Antigravity, Cursor, Codex, ChatGPT, ChatWise, Grok).
 
